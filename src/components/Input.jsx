@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { ContextProvider } from "../global/context";
 import styles from './input.module.scss';
 
 export default class Input extends Component {
@@ -10,7 +11,7 @@ export default class Input extends Component {
     };
   }
 handleChange=(event)=>{
-this.setState({value:event.target.value})
+this.props.callback(event.target.value)
 }
   render() {
       const {children,type,login}= this.props;

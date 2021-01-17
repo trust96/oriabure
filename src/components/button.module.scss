@@ -28,7 +28,26 @@ box-shadow: 0 0 0 var(--border-line) var(--white),
 0 0 0 calc(var(--border-line)*2) var(--primary-04);
 ;
 }
+.delete{
+    composes:default;
+    background-color:var(--gray-01);
+    color:var(--black);
+    font-weight: var(--font-weight-light);
+}
 
+.delete:hover{
+    background-color:var(--gray-02);
+}
+.delete:active{
+
+    background-color:var(--gray-00);
+}
+.delete:focus{
+outline: none;
+box-shadow: 0 0 0 var(--border-line) var(--white),
+0 0 0 calc(var(--border-line)*2) var(--gray-02);
+;
+}
 .fullwidth{
     width:100%;
 }

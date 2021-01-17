@@ -10,17 +10,13 @@ export default class Button extends Component {
              
         }
     }
-    handleClick=(e)=>{
-        e.preventDefault();
-        console.log(this.state.value)
-    }
     render() {
         const {type, children,primary, fullwidth} = this.props;
         return (
             <>
               <button 
               type={type}
-              className={`${primary? button.primary: ''} ${fullwidth? button.fullwidth: ''}`}
+              className={`${primary? button.primary: ''} ${this.props.delete? button.delete: ''} ${fullwidth? button.fullwidth: ''}`}
               onClick={this.handleClick}
                >
                    {children}</button>  
