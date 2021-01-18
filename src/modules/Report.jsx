@@ -17,7 +17,7 @@ export class Report extends Component {
           {" "}
           Welcome back, {this.state.username}
         </h1>
-
+<form action="">
         <div class={`${styles.content}`}>
           <label className={`${styles.label}`} htmlFor="report">
             Report
@@ -30,6 +30,7 @@ export class Report extends Component {
           />
           <Button primary> Submit </Button>
         </div>
+        </form>
       </>
     );
   }
